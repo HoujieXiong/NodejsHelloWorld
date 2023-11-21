@@ -21,6 +21,7 @@ encoder = H264Encoder(10000000)
 picam2.start_recording(encoder, 'test.h264')
 time.sleep(5)
 
+print("before while loop")
 
 
 
