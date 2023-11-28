@@ -5,7 +5,7 @@ import time
 from picamera2 import Picamera2
 from picamera2.encoders import H264Encoder
 from PIL import Image
-import zbarlight 
+#import zbarlight 
 
 # Encode a VGA stream, and capture a higher resolution still image half way through.
 
@@ -37,11 +37,11 @@ while (True):
         image.load()
     
     time.sleep(1)
-    codes=zbarlight.scan_codes(['qrcode'],image)
-    print('QR codes: $s' % codes)
+    #codes=zbarlight.scan_codes(['qrcode'],image)
+    #print('QR codes: $s' % codes)
 
     f = open("test.txt", "w")
-    f.write(codes)
+    #f.write(codes)
     f.close()
 
     #open and read the file after the appending:

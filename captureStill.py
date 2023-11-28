@@ -4,7 +4,7 @@ from picamera2 import Picamera2, Preview
 #this will output a jepg file.
 picam2 = Picamera2()
 
-preview_config = picam2.create_preview_configuration(main={"size": (800, 600)})
+preview_config = picam2.create_preview_configuration(main={"size": (640, 480)})
 picam2.configure(preview_config)
 
 picam2.start_preview(Preview.QTGL)
