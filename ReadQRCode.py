@@ -20,7 +20,7 @@ while (True):
             print('QR codes: %s' % codes)
 
             f = open("test.txt", "w")
-            #f.write(codes)
+            f.write(codes)
             f.close()
             #open and read the file after the appending:
             f = open("test.txt", "r")
