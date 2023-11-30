@@ -11,9 +11,9 @@ while (True):
     #with open('test.jpg','rb') as image_file:
     image_file=Image.open("test.jpg")
     image_file=image_file.convert('L')
+    image_file.close()
     #image_file.load()
     
-    time.sleep(0.5)
     
     codes=zbarlight.scan_codes(['qrcode'],image_file)
     print("found test.jpg")
@@ -27,3 +27,5 @@ while (True):
         f = open("test.txt", "r")
         
         print(f.read())
+
+    time.sleep(0.5)

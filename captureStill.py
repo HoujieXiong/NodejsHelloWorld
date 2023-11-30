@@ -11,7 +11,7 @@ picam2 = Picamera2()
 
 picam2.start()
 while(1):
-    time.sleep(0.1)
+    time.sleep(0.5)
     metadata = picam2.capture_file("test.jpg")
     print(metadata)
 
