@@ -14,13 +14,15 @@ while (True):
     #image_file.load()
     
     time.sleep(0.5)
+    
     codes=zbarlight.scan_codes(['qrcode'],image_file)
-    print('QR codes: $s' % codes)
+    if(codes):
+        print('QR codes: $s' % codes)
 
-    f = open("test.txt", "w")
-    #f.write(codes)
-    f.close()
-
-    #open and read the file after the appending:
-    f = open("test.txt", "r")
-    print(f.read())
+        f = open("test.txt", "w")
+        #f.write(codes)
+        f.close()
+        #open and read the file after the appending:
+        f = open("test.txt", "r")
+        
+        print(f.read())
