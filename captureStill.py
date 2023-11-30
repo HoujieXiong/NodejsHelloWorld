@@ -10,9 +10,9 @@ picam2 = Picamera2()
 #picam2.start_preview(Preview.QTGL)
 
 picam2.start()
-time.sleep(2)
-
-metadata = picam2.capture_file("test.jpg")
-print(metadata)
+while(1):
+    time.sleep(0.1)
+    metadata = picam2.capture_file("test.jpg")
+    print(metadata)
 
 picam2.close()
