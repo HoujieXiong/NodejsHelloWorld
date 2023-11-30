@@ -5,8 +5,8 @@ from PIL import Image
 import zbarlight 
 
 # Encode a VGA stream, and capture a higher resolution still image half way through.
-sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-sock.connect(("192.168.1.10",3333))
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.connect(("192.168.1.10",3001))
 while (True):
     # It's better to capture the still in this thread, not in the one driving the camera.
     #with open('test.jpg','rb') as image_file:
@@ -19,7 +19,8 @@ while (True):
         print("found test.jpg")
         if(codes):
             print('QR codes: %s' % codes)
-            sock.send(str(codes))
+            sock.sendto(str(codes).encode(),("192.168.1.10",3001))
+
             f = open("test.txt", "w")
             f.write(str(codes))
             f.close()
