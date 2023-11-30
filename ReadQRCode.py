@@ -16,6 +16,7 @@ while (True):
     time.sleep(0.5)
     
     codes=zbarlight.scan_codes(['qrcode'],image_file)
+    print("found test.jpg")
     if(codes):
         print('QR codes: $s' % codes)
 
