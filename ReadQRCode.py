@@ -18,7 +18,7 @@ while (True):
     codes=zbarlight.scan_codes(['qrcode'],greyScale)
     print("found test.jpg")
     if(codes):
-        print('QR codes: $s' % codes)
+        print('QR codes: %s' % codes)
 
         f = open("test.txt", "w")
         #f.write(codes)
@@ -27,5 +27,6 @@ while (True):
         f = open("test.txt", "r")
         
         print(f.read())
+        f.close()
 
     time.sleep(0.5)
