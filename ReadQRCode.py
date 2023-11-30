@@ -19,7 +19,7 @@ while (True):
         print("found test.jpg")
         if(codes):
             print('QR codes: %s' % codes)
-            sock.sendto(str(codes[0]).encode(),("192.168.1.10",3001))
+            sock.sendto(codes[0].encode(),("192.168.1.10",3001))
 
             f = open("test.txt", "w")
             f.write(str(codes))
