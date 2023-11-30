@@ -9,7 +9,7 @@ import zbarlight
 while (True):
     # It's better to capture the still in this thread, not in the one driving the camera.
     #with open('test.jpg','rb') as image_file:
-    image_file=Image.open("test.jpg")
+    image_file=Image.load("test.jpg")
     greyScale=image_file.convert('L')
     image_file.close()
     #image_file.load()
