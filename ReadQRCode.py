@@ -8,9 +8,10 @@ import zbarlight
 
 while (True):
     # It's better to capture the still in this thread, not in the one driving the camera.
-    with open('test.jpg','rb') as image_file:
-        image_file=image_file.convert('L')
-        image_file.load()
+    #with open('test.jpg','rb') as image_file:
+    image_file=Image.open("test.jpg")
+    image_file=image_file.convert('L')
+    #image_file.load()
     
     time.sleep(0.5)
     codes=zbarlight.scan_codes(['qrcode'],image_file)
