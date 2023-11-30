@@ -14,8 +14,6 @@ while (True):
         greyScale=image_file.convert('L')
         image_file.close()
         #image_file.load()
-        
-        
         codes=zbarlight.scan_codes(['qrcode'],greyScale)
         print("found test.jpg")
         if(codes):
@@ -31,4 +29,4 @@ while (True):
             f.close()
     except:
         print("Not found")
-    time.sleep(0.5)
+    time.sleep(0.1)
